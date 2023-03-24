@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#232b2b"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#232b2b"
+    android:layout_marginBottom="20dp"
+    tools:context=".ui.DetailsFragment">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_baseline_arrow_back"
+        tools:ignore="ContentDescription"
+        />
+
+    <TextView
+        android:id="@+id/brand_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="15dp"
+        android:textSize="17sp"
+        android:textStyle="normal|bold"
+        android:fontFamily="sans-serif-light"
+        android:text="Bolaji Oseni"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background"
+                tools:ignore="ContentDescription"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        android:textStyle="normal|bold"
+        android:fontFamily="sans-serif-light"
+        android:text="Description"/>
+
+
+    <TextView
+        android:id="@+id/brand_discription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:textStyle="normal|bold"
+        android:fontFamily="sans-serif-light"
+        android:text="Bolaji Oseni"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        android:textStyle="normal|bold"
+        android:fontFamily="sans-serif-light"
+        android:text="Tags"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:id="@+id/price_layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/search_green"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/price_p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="visible"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Price"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"/>
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/web_layout"
+            android:layout_width="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:visibility="visible"
+            android:background="@drawable/search_green"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/rating_t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Website"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:visibility="visible"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/teal_200"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/category_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/search_green"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/category_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:visibility="visible"
+                android:text="Category"
+                android:textStyle="bold"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/teal_200"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:id="@+id/currency_layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/search_green"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/currency_p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="visible"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="USD"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cu_layout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/search_green"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/curr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="20dp"
+                android:visibility="visible"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Purchase"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"/>
+
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:visibility="visible"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Other Info"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"
+        android:text="Name"
+        android:textStyle="normal"
+        android:textColor="@color/text_color"/>
+
+
+    <TextView
+        android:id="@+id/name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="22/03/23"
+        android:textStyle="italic"
+        android:textColor="@color/text_color"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#d3d3d3"
+        android:background="#d3d3d3"
+        />
+
+
+
+    <TextView
+        android:id="@+id/currttt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"
+        android:text="Manufacture Date"
+        android:textStyle="normal"
+        android:textColor="@color/text_color"/>
+
+
+    <TextView
+        android:id="@+id/date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="22/03/23"
+        android:textStyle="italic"
+        android:textColor="@color/text_color"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#d3d3d3"
+        android:background="#d3d3d3"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"
+        android:text="Product Type"
+        android:textStyle="normal"
+        android:textColor="@color/text_color"/>
+
+
+    <TextView
+        android:id="@+id/type_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="type"
+        android:textStyle="italic"
+        android:textColor="@color/text_color"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#d3d3d3"
+        android:background="#d3d3d3"
+        />
+
+
+
+
+
+
+</LinearLayout>
+</ScrollView>
